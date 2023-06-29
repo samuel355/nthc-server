@@ -20,4 +20,7 @@ app.get('/', (req, res) => {
     res.send(`MAIN - Here we go again and N.T.H.C. server is running on port ${port}`)
 })
 
+//Routes
+app.use('/api', contactUsRouter)
+
 app.listen(port, console.log(`NTHC PLOTS Server is running on port ${port}`));
