@@ -3,6 +3,8 @@ const dotenv = require('dotenv');
 const cors = require('cors')
 const connectDB = require('./connectDB');
 const contactUsRouter = require('./routes/ContactUsRoutes.js')
+const userRouter = require('./routes/UserRoutes.js');
+const plotRouter = require('./routes/PlotRoutes.js');
 
 dotenv.config();
 const app = express()
@@ -22,5 +24,7 @@ app.get('/', (req, res) => {
 
 //Routes
 app.use('/api', contactUsRouter)
+app.use('/api', userRouter) //User Router
+app.use('/api', plotRouter)
 
 app.listen(port, console.log(`NTHC PLOTS Server is running on port ${port}`));
