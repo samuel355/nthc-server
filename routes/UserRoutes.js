@@ -2,7 +2,7 @@ const express = require('express')
 const UserModel = require('../models/UserModel.js')
 const asyncHandler = require('express-async-handler')
 const generateToken = require('../utils/generateToken.js')
-const protect = require('../Middleware/AuthMiddleware.js')
+const protect = require('../middleware/auth.js')
 const bcrypt = require('bcryptjs')
 const nodemailer = require('nodemailer')
 

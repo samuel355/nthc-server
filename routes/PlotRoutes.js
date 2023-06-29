@@ -2,7 +2,7 @@ const mongoose = require('mongoose')
 const express = require('express')
 const PlotDetails = require('../models/PlotDetails.js')
 const asyncHandler = require('express-async-handler')
-const protect = require('../Middleware/AuthMiddleware.js')
+const protect = require('../middleware/auth.js')
 
 
 const plotRouter = express.Router()
