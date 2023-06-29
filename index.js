@@ -2,6 +2,7 @@ const express = require('express')
 const dotenv = require('dotenv');
 const cors = require('cors')
 const connectDB = require('./connectDB');
+const contactUsRouter = require('./routes/ContactUsRoutes.js')
 
 dotenv.config();
 const app = express()
@@ -9,7 +10,6 @@ app.use(express.json())
 app.use(cors())
 
 const port = process.env.PORT || 6006
-
 
 connectDB() 
 
